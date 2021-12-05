@@ -1,4 +1,5 @@
 # Censo_Classificacao
+[![NPM](https://img.shields.io/npm/l/react)](https://github.com/LombaAnderson/Censo_Classificacao/blob/main/LICENSE)
 
 
 Base de dados censo retirada do site UCI Machine Learning Repository (https://archive.ics.uci.edu/ml/index.php). Nesse conjunto de dados a precisão de acertos
