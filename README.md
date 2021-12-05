@@ -12,10 +12,8 @@ do algoritmo Naïve Bayes foi de 79,4 %.  Nessa análise os atributos categóric
 - Anaconda
 - Jupyter Notebook
 - Pandas
-- Numpy
-- Seaborn
-- Matplotlib 
-- Plotly
+- Sklearn
+- Naïve Bayes 
 
 
 # Como executar o projeto
@@ -24,18 +22,15 @@ Pré-requisitos: Possuir instalado Python, Anaconda e acessar o Jubyter Notebook
 
 ```bash
 # clonar repositório
-git clone https://github.com/LombaAnderson/Risco_Credito_Data_Science
+git clone https://github.com/LombaAnderson/Censo_Classificacao
 
 # entrar na pasta do projeto com o Jupyter Notebook
 
-# Acessar file e escolher o nome do projeto Risco_Credito
+# Acessar file e escolher o nome do projeto Censo_Classificacao
 
 # executar o projeto
 
-Risco_Credito.ipynb
-
-```
-
+Preprocessamento_censo.py 
 
 
 
@@ -94,6 +89,7 @@ matriz = confusion_matrix(classe_teste, previsoes)
 
 precisao * 100  # resultado 79,4 % 
 
+```
 
 # Autor
 
