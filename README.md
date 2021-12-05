@@ -38,12 +38,12 @@ import pandas as pd
 
 base = pd.read_csv('census.csv' )
 
-## Criando matriz previsores e matriz classe 
+# Criando matriz previsores e matriz classe 
 previsores = base.iloc[:, 0:14].values
 classe = base.iloc[:,14].values
 
 
-## Transformando atributos categóricos de previsores em atributos numéricos
+# Transformando atributos categóricos de previsores em atributos numéricos
 
 from sklearn.preprocessing import LabelEncoder
 labelencoder = LabelEncoder()  # Instanciamento da variável labelencoder
@@ -57,19 +57,19 @@ previsores[:,9] = labelencoder.fit_transform(previsores[:,9])
 previsores[:,13] = labelencoder.fit_transform(previsores[:,13])
 
 
-## Transformando atributos categóricos da matriz classe em atributos numéricos
+# Transformando atributos categóricos da matriz classe em atributos numéricos
 labelencoder_classe = LabelEncoder()
 classe = labelencoder_classe.fit_transform(classe)
 
 
-## Divisão das bases de dados em teste e treinamento(Aprendizagem supervisionada)
+# Divisão das bases de dados em teste e treinamento(Aprendizagem supervisionada)
 
 from sklearn.model_selection import train_test_split
 previsores_treinamento, previsores_teste, classe_treinamento, classe_teste = train_test_split\
     (previsores,classe,test_size = 0.25, random_state= 0)
 
 
-## Utilização do algoritmo Naïve Bayes para geração da tabela de probabilidade
+# Utilização do algoritmo Naïve Bayes para geração da tabela de probabilidade
 
 from sklearn.naive_bayes import GaussianNB
 classificador = GaussianNB()
@@ -77,7 +77,7 @@ classificador.fit(previsores_treinamento, classe_treinamento)
 previsoes = classificador.predict(previsores_teste)
 
 
-## Códigos para verificar os acertos e erros do algoritmo Naïve Bayes
+# Códigos para verificar os acertos e erros do algoritmo Naïve Bayes
 
 from sklearn.metrics import confusion_matrix, accuracy_score
 precisao = accuracy_score(classe_teste, previsoes)
@@ -85,7 +85,7 @@ matriz = confusion_matrix(classe_teste, previsoes)
 
 
 
-## Resultado da acurácia do algoritmo Naïve Bayes
+# Resultado da acurácia do algoritmo Naïve Bayes
 
 precisao * 100  # resultado 79,4 % 
 
@@ -100,7 +100,7 @@ Linkedin
 https://www.linkedin.com/in/anderson-lomba-140279142/
 
 
-# -*- coding: utf-8 -*-
+
 """
 Created on Sat Apr  10 19:20:12 2021
 
